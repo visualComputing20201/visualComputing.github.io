@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie video;
-int alto,ancho, selector=1;
+int alto,ancho, selector=5;
 PGraphics pg1,pg2;
 float k = 1.0/9;
 float k2 = 1.0/16;
@@ -10,8 +10,10 @@ float[][] gaussianBlurKernel = { { k2, 2*k2, k2 },{ 2*k2 ,4*k2 ,2*k2 }, { k2, 2*
 float [][] edgeKernel = {{-1, -1, -1},{-1, 8, -1},{-1, -1, -1}};
 char[] ascii;
 int resolution = 4;
+PrintWriter fps_registro;
 void setup() {
-  size(1300,520);    
+  size(1300,520);   
+  fps_registro = createWriter("fps_registro_software.txt");
   video = new Movie(this, "launch2.mp4");
   video.loop();
   ancho = 600;
@@ -45,37 +47,37 @@ void draw() {
       pg1.beginDraw();
       escala_grises(pg1);
       pg1.endDraw();
-      image(pg1,ancho+90,40);
+      image(pg1,ancho+95,40);
       break;
     case 2:
       pg1.beginDraw();
       luma(pg1);
       pg1.endDraw();
-      image(pg1,ancho+90,40);
+      image(pg1,ancho+95,40);
       break;
     case 3: 
       pg2.beginDraw();
       convolucion(blurKernel,pg1,pg2,3);
       pg2.endDraw();
-      image(pg2,ancho+90,40);
+      image(pg2,ancho+95,40);
       break;
     case 4:
       pg2.beginDraw();
       convolucion(sharpenKernel,pg1,pg2,3);
       pg2.endDraw();
-      image(pg2,ancho+90,40);
+      image(pg2,ancho+95,40);
       break;
     case 5:
       pg2.beginDraw();
       convolucion(edgeKernel,pg1,pg2,3);
       pg2.endDraw();
-      image(pg2,ancho+90,40);
+      image(pg2,ancho+95,40);
       break;
     case 6:
       pg2.beginDraw();
       convolucion(gaussianBlurKernel,pg1,pg2,3);
       pg2.endDraw();
-      image(pg2,ancho+90,40);
+      image(pg2,ancho+95,40);
       break;
     case 7:
       pg2.beginDraw();
@@ -85,9 +87,10 @@ void draw() {
       fill(0);
       to_ascii(pg1,pg2);
       pg2.endDraw();
-      image(pg2,ancho+90,40);
+      image(pg2,ancho+95,40);
       break;
   }
+  fps_registro.println(frameRate);
   
 }
 void to_ascii(PImage original, PImage destino) {

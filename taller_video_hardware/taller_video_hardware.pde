@@ -1,6 +1,6 @@
 import processing.video.*;
 Movie video;
-int alto,ancho, selector=1;
+int alto,ancho, selector=5;
 PGraphics pg1,pg2;
 float k = 1.0/9;
 float k2 = 1.0/16;
@@ -10,8 +10,10 @@ float[] gaussianBlurKernel = {  k2, 2*k2, k2 , 2*k2 ,4*k2 ,2*k2 ,  k2, 2*k2, k2 
 float [] edgeKernel = {-1, -1, -1,-1, 8, -1,-1, -1, -1};
 PShader lumaShader, grayShader,convolutionShader;
 PShape texFrame;
+PrintWriter fps_registro;
 void setup() {
   size(1300,520,P2D);    
+  fps_registro = createWriter("fps_registro_hardware.txt");
   video = new Movie(this, "launch2.mp4");
   video.loop();
   lumaShader = loadShader("luma.glsl");
@@ -73,7 +75,7 @@ void draw() {
   }
   image(pg1, 5, 40);
   image(pg2, ancho+95, 40);
-  
+  fps_registro.println(frameRate);
 }
 void movieEvent(Movie video) {
   video.read();
