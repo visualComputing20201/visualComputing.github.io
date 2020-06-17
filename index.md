@@ -79,9 +79,11 @@ void main() {
 
 #### Resultados
 
-1. Imagen
+* RGB
 
 ![rgb_image](./img/rgb_image.png)
+
+* Luma
 
 ![luma_image](./img/luma_image.png)
 
@@ -147,13 +149,19 @@ void main() {
 
 #### Resultados
 
-1. Imagen
+* Blur
 
 ![blur_image](./img/blur_image.png)
 
+* Sharpen
+
 ![sharpen_image](./img/sharpen_image.png)
 
+* Edge
+
 ![edge_image](./img/edge_image.png)
+
+* Gaussian
 
 ![gaussian_image](./img/gaussian_image.png)
 
@@ -178,8 +186,6 @@ void convertir_ascii(PImage img) {
 ```
 
 #### Resultados
-
-1. Imagen
 
 ![ascii_image](./img/ascii_image.png)
 
