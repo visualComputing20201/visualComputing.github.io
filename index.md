@@ -2,32 +2,26 @@
 layout: default
 ---
 
-Text can be **bold**, _italic_, or ~~strikethrough~~.
+| Nombres        | Apellidos          | Usuario |
+|:-------------|:------------------|:------|
+| Adriana           | Dorado Soler | gadrielag  |
+| Pedro Alexander | good and plenty   | pahigueraf  |
 
-[Link al repositorio](./another-page.html).
+[Link al repositorio](https://github.com/visualComputing20201/visualComputing.github.io)
+
+# Objetivo
+
+# Motivación
+
+# Actividades
+
+## Conversión a escala de grises
 
 
-# Conversión a escala de grises
 
+### Imagen
 
-
-## Imagen
-
-## Vídeo
-
-```js
-// Javascript code with syntax highlighting.
-var fun = function lang(l) {
-  dateformat.i18n = require('./lang/' + l)
-  return true;
-}
-```
-
-# Máscaras de convulución
-
-## Imagen
-
-## Vídeo
+### Vídeo
 
 ```js
 // Javascript code with syntax highlighting.
@@ -37,11 +31,25 @@ var fun = function lang(l) {
 }
 ```
 
-# Conversión a ASCII
+## Máscaras de convulución
 
-## Imagen
+### Imagen
 
-## Vídeo
+### Vídeo
+
+```js
+// Javascript code with syntax highlighting.
+var fun = function lang(l) {
+  dateformat.i18n = require('./lang/' + l)
+  return true;
+}
+```
+
+## Conversión a ASCII
+
+### Imagen
+
+### Vídeo
 
 ```js
 // Javascript code with syntax highlighting.
@@ -51,9 +59,9 @@ var fun = function lang(l) {
 }
 ```
 
-# Despliegue del histograma
+## Despliegue del histograma
 
-## Imagen
+### Imagen
 
 ```js
 // Javascript code with syntax highlighting.
@@ -62,9 +70,9 @@ var fun = function lang(l) {
   return true;
 }
 ```
-# Eficiencia computacional
+## Eficiencia computacional
 
-## Video
+### Video
 
 ```js
 // Javascript code with syntax highlighting.
