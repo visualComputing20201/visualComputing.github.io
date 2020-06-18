@@ -159,6 +159,8 @@ void main() {
 
 ![sharpen_image](./img/sharpen_image.png)
 
+![gif-sharpen](./img/gif-sharpen.gif)
+
 * Edge
 
 ![edge_image](./img/edge_image.png)
@@ -192,6 +194,7 @@ void convertir_ascii(PImage img) {
 #### Resultados
 
 ![ascii_image](./img/ascii_image.png)
+![gif-ascii](./img/gif-ascii.gif)
 
 ## 4. Despliegue del histograma
 
