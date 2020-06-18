@@ -83,6 +83,8 @@ void main() {
 
 ![rgb_image](./img/rgb_image.png)
 
+![gif-gray](./img/gif-gray.gif)
+
 * Luma
 
 ![luma_image](./img/luma_image.png)
