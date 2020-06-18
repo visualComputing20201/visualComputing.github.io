@@ -161,6 +161,8 @@ void main() {
 
 ![edge_image](./img/edge_image.png)
 
+![gif-edge](./img/gif-edge.gif)
+
 * Gaussian
 
 ![gaussian_image](./img/gaussian_image.png)
@@ -215,7 +217,9 @@ int [] histogram(PImage img){
 
 #### Resultados
 
-![eficiencia_video](./img/eficiencia_video.png)
+Se comparan resultados empleando software y hardware para la máscara de convolución de Edge. Las diferencias se pueden ver en la siguiente imagen:
+
+![eficiencia_video](./img/eficiencia_video.jpeg)
 
 
 # Conclusiones
